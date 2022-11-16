@@ -1,0 +1,107 @@
+body{
+    background-color: rgb(184, 137, 137);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    #background{
+        position: fixed;
+        filter: grayscale(0.8);
+        animation: kenburns-top-left 6s reverse;
+        // transition: 3s;
+    }
+
+    #mute{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1rem;
+        height: 1rem;
+        position: fixed;
+        top: 10rem;
+        right: 8rem;
+        background-color: #803a25;
+        border-radius: 100%;
+        border: solid 2px white;
+        padding: 2.6rem;
+        cursor: pointer;
+        animation: bounce-top 0.9s 1s both;
+        
+        i{
+            font-size: 2.8rem;
+            color: #FFFFFF;
+        }
+    }
+
+    #mute:hover{
+        background-color: #FFFFFF;
+        transition: 2s;
+        
+
+        i{
+            color: black;
+        }
+    }
+
+
+    #title_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 55%;
+        padding-bottom: 4rem;
+        padding-right: 2rem;
+        // background-color: rgb(193, 193, 193);
+        border-radius: 1rem;
+        // -webkit-box-shadow: 6px 5px 20px 5px #3c5aa6; 
+        // box-shadow: 6px 5px 20px 5px #3c5aa6;
+
+        #logo_container{  
+            
+            // border: solid black 6px;
+            width: 80%;
+
+            #logo_pokemon{
+                // width: 100%;
+                filter: drop-shadow(6px 12px 4px);
+                animation: rotate-in-2-cw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+            }
+        }
+            
+        h2{
+            font-family: 'Solid';
+            font-size: 3.5rem;
+            text-shadow: 3px 8px 2px #ffcb05;
+            letter-spacing: 0.7rem;
+            color: #18235f;
+            margin-left: 4rem;
+            // font-style: italic;
+            text-align: center;
+            filter: drop-shadow(4px 4px 4px);
+            animation: slide-in-elliptic-bottom-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.7s both;
+        }
+
+        h3{
+            font-family: 'Orbitron';
+            color: #FFFFFF;
+            text-shadow: 2px 4px 2px #132b7b;
+            border: solid 2px rgb(56, 11, 11);
+            background-color: #803a25;
+            border-radius: 0.5rem;
+            padding: 1.2rem;
+            margin-top: 7rem;
+            font-size: 2rem;
+            margin-left: 4rem;
+            animation: heartbeat 3s ease-in-out infinite 3s both;
+            cursor: pointer;
+        }
+    
+
+
+
+    }
+
+}
