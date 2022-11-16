@@ -1,6 +1,4 @@
-body{
-    background-color: rgb(184, 137, 137);
-    display: flex;
+body{    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -9,6 +7,9 @@ body{
         position: fixed;
         filter: grayscale(0.8);
         animation: kenburns-top-left 6s reverse;
+        object-fit: cover;
+        width: 100vw;
+        
         // transition: 3s;
     }
 

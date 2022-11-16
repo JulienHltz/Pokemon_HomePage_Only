@@ -1,36 +1,51 @@
-let start_sound = document.getElementById('start_music')
-let mute_btn = document.getElementById('mute')
 
-window.onload=function(){
-  // alert("Veuillez activer le son sur votre navigateur web")
-  // window.location.reload()
-    start_sound.play()
 
-    
+refreshCSS = () => {
+  let links = document.getElementsByTagName("link");
+  for (let i = 0; i < links.length; i++) {
+    if (links[i].getAttribute("rel") == "stylesheet") {
+      let href = links[i].getAttribute("href").split("?")[0];
+      let newHref = href + "?version=" + new Date().getMilliseconds();
+      links[i].setAttribute("href", newHref);
+    }
   }
+};
 
-function muteAudio(){
+window.onload = function () {
+  
+  let MyPrompt = prompt(
+    'Voulez-vous activer le son du jeu ? Répondre par "oui" ou par "non"'
+    );
+    console.log(typeof MyPrompt);
+    if (MyPrompt === "oui" || MyPrompt === "non") {
+      alert("Lancement de la musique.")
+      
+      elseif(MyPrompt === "non")
+      audioEl.play()
 
-audio = document.getElementById('audioPlayer')
-
-mute_btn.addEventListener('click', () =>{
-  start_sound.muted = true
-  })
-
-  if(start_sound.muted = true){
-    mute_btn.addEventListener('click', () =>{
-      start_sound.muted = false
-    })
+      
+    refreshCSS()
+  } else {
+    alert('Réponse incorrecte.')
+    location.reload();
   }
+};
 
-  else if(start_sound.muted = false){
-    mute_btn.addEventListener('click', () =>{
-      start_sound.muted = true
-    })
+let soundBtn = document.getElementById('mute')
+let audioEl = document.getElementById('start_music')
+
+soundBtn.addEventListener("click", () => {
+  console.log(audioEl.paused);
+  if (audioEl.paused) {
+    audioEl.play()
+  } else {
+    audioEl.pause()
+    audioEl.currentTime = 0;
   }
+});
 
 
-}
+
 
 
 
