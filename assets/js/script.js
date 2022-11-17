@@ -1,5 +1,3 @@
-
-
 refreshCSS = () => {
   let links = document.getElementsByTagName("link");
   for (let i = 0; i < links.length; i++) {
@@ -11,59 +9,45 @@ refreshCSS = () => {
   }
 };
 
-function toggleFaSound(e){
-  e.classList.toggle('fa-volume')
-}
+let soundBtn = document.getElementById("mute");
+let audioEl = document.getElementById("start_music");
+let body = document.getElementById("body");
+let faSound = document.getElementById("fa_sound");
 
-let soundBtn = document.getElementById('mute')
-let audioEl = document.getElementById('start_music')
-let body = document.getElementById('body')
-
-window.onload=function(){
-  body.style.display='flex'
+window.onload = function () {
+  body.style.display = "flex";
   let MyPrompt = prompt(
     'Voulez-vous activer le son en jeu ? Répondre par "oui" ou par "non"'
-    )
-    
-    if (MyPrompt === "oui"){
-      console.log("test musique");
-      alert("Lancement de la musique.")
-      refreshCSS()
-      audioEl.play()
-    }
-    
-    if (MyPrompt === "non"){
-      alert("Lancement de la partie sans musique.")
-      refreshCSS()
-      changeFaOnMusic()
-    }
-    
-      // else {
-        // alert('Réponse incorrecte.')
-        // location.reload();
-      // }
-    
-}
-      
+  );
+
+  if (MyPrompt === "oui") {
+    console.log("test musique");
+    alert("Lancement de la musique.");
+    refreshCSS();
+    audioEl.play();
+    faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
+    soundBtn.style.backgroundColor = "#2f779c";
+  }
+
+  if (MyPrompt === "non") {
+    alert("Lancement de la partie sans musique.");
+    refreshCSS();
+  }
+};
 
 //  Mute or UnMute sound with Btn
-
-
-
 
 soundBtn.addEventListener("click", () => {
   // console.log(audioEl.paused);
   if (audioEl.paused) {
-    audioEl.play()
+    audioEl.play();
+    faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
+    soundBtn.style.backgroundColor = "#2f779c";
   } else {
-    audioEl.pause()
+    audioEl.pause();
     audioEl.currentTime = 0;
+    faSound.classList.replace("fa-volume-high", "fa-volume-xmark");
+    soundBtn.style.backgroundColor = "#b92b2b";
+
   }
 });
-
-
-
-
-
-
-

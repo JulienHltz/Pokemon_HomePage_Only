@@ -10,6 +10,7 @@ body{
         animation: kenburns-top-left 6s reverse;
         object-fit: cover;
         width: 100vw;
+        height: 100vh;
         
         // transition: 3s;
     }
@@ -23,7 +24,7 @@ body{
         position: fixed;
         top: 10rem;
         right: 8rem;
-        background-color: #803a25;
+        background-color: #b92b2b;
         border-radius: 100%;
         border: solid 2px white;
         padding: 2.6rem;
@@ -99,6 +100,7 @@ body{
             margin-left: 4rem;
             animation: heartbeat 3s ease-in-out infinite 3s both;
             cursor: pointer;
+            text-align: center;
         }
     
 
