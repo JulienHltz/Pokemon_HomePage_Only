@@ -23,8 +23,8 @@ window.onload = function () {
   if (MyPrompt === "oui") {
     console.log("test musique");
     alert("Lancement de la musique.");
+      audioEl.play();
     refreshCSS();
-    audioEl.play();
     faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
     soundBtn.style.backgroundColor = "#2f779c";
   }
