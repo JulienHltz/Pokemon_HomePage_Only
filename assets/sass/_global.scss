@@ -1,8 +1,84 @@
 body{    
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
+
+    #modalContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        border: solid;
+        background-color: rgba(27, 30, 30, 0.886);
+        
+
+
+        #modal{
+            width: 35%;
+            height: 50%;
+            background-color: wheat;
+            border-radius: 1rem;
+            // border: solid black 5px;
+            
+            #modalText{
+            font-family: 'Orbitron';
+            font-size: 1.3rem;
+            width: 70%;
+            margin: 5rem auto 0 auto;
+            text-align: center;
+            border-radius: 1rem;
+            padding: 0.6rem;
+            // border: solid;
+            background-color: #132b7b;
+            color: white ;
+            text-shadow: 2px 4px 2px #803a25;
+        }
+        
+        #btnContainer{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 4.2rem;
+        
+        .modal_button{
+            color: white;
+            font-family: 'Orbitron';
+            font-weight: bold;
+            font-size: 1.3rem;
+            border-radius: 1rem;
+            padding: 0.4rem 0 0.4rem 0;
+            width: 4rem;
+            height: 3.3rem;
+            cursor: pointer;
+            border: none;
+
+        }
+        
+        #ouiBtn{
+            background-color: green;
+
+        }
+        #ouiBtn:hover{
+            background-color: black;
+            
+        }
+
+        
+        #nonBtn{
+            background-color: #b92b2b;
+
+        }
+        #nonBtn:hover{
+            background-color: black;
+        }
+    }
+    }
+    }
+
     
     #background{
         position: fixed;
