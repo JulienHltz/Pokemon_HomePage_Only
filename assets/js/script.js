@@ -11,31 +11,46 @@ refreshCSS = () => {
   }
 };
 
-window.onload = function () {
-  
-  let MyPrompt = prompt(
-    'Voulez-vous activer le son du jeu ? Répondre par "oui" ou par "non"'
-    );
-    console.log(typeof MyPrompt);
-    if (MyPrompt === "oui" || MyPrompt === "non") {
-      alert("Lancement de la musique.")
-      
-      elseif(MyPrompt === "non")
-      audioEl.play()
-
-      
-    refreshCSS()
-  } else {
-    alert('Réponse incorrecte.')
-    location.reload();
-  }
-};
+function toggleFaSound(e){
+  e.classList.toggle('fa-volume')
+}
 
 let soundBtn = document.getElementById('mute')
 let audioEl = document.getElementById('start_music')
 
+window.onload=function(){
+  let MyPrompt = prompt(
+    'Voulez-vous activer le son en jeu ? Répondre par "oui" ou par "non"'
+    )
+    
+    if (MyPrompt === "oui"){
+      console.log("test musique");
+      alert("Lancement de la musique.")
+      refreshCSS()
+      audioEl.play()
+    }
+    
+    if (MyPrompt === "non"){
+      alert("Lancement de la partie sans musique.")
+      refreshCSS()
+      changeFaOnMusic()
+    }
+    
+      // else {
+        // alert('Réponse incorrecte.')
+        // location.reload();
+      // }
+    
+}
+      
+
+//  Mute or UnMute sound with Btn
+
+
+
+
 soundBtn.addEventListener("click", () => {
-  console.log(audioEl.paused);
+  // console.log(audioEl.paused);
   if (audioEl.paused) {
     audioEl.play()
   } else {
