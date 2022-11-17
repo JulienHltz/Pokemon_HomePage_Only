@@ -17,8 +17,10 @@ function toggleFaSound(e){
 
 let soundBtn = document.getElementById('mute')
 let audioEl = document.getElementById('start_music')
+let body = document.getElementById('body')
 
 window.onload=function(){
+  body.style.display='flex'
   let MyPrompt = prompt(
     'Voulez-vous activer le son en jeu ? Répondre par "oui" ou par "non"'
     )
