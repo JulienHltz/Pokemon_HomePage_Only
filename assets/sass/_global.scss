@@ -34,9 +34,8 @@ body{
             border-radius: 1rem;
             padding: 0.6rem;
             // border: solid;
-            background-color: #132b7b;
+            background-color: #3c5aa6;
             color: white ;
-            text-shadow: 2px 4px 2px #803a25;
         }
         
         #btnContainer{
@@ -51,10 +50,11 @@ body{
             font-size: 1.3rem;
             border-radius: 1rem;
             padding: 0.4rem 0 0.4rem 0;
-            width: 4rem;
+            width: 8rem;
             height: 3.3rem;
             cursor: pointer;
             border: none;
+            margin-top: 3.5rem;
 
         }
         
@@ -82,13 +82,16 @@ body{
     
     #background{
         position: fixed;
-        filter: grayscale(0.8);
-        animation: kenburns-top-left 6s reverse;
         object-fit: cover;
         width: 100vw;
         height: 100vh;
         
         // transition: 3s;
+    }
+
+    // Class to start animation after modal
+    .kenburns{
+        animation: kenburns-top-left 6s reverse;
     }
 
     #mute{
@@ -105,7 +108,6 @@ body{
         border: solid 2px white;
         padding: 2.6rem;
         cursor: pointer;
-        animation: bounce-top 0.9s 1s both;
         
         i{
             font-size: 2.8rem;
@@ -116,6 +118,12 @@ body{
     #mute:hover{
         background-color: #FFFFFF;
         transition: 2s;
+
+    // Class to start animation after modal
+        .bounce{
+        animation: bounce-top 0.9s 1s both;
+
+        }
         
 
         i{
@@ -132,41 +140,41 @@ body{
         width: 55%;
         padding-bottom: 4rem;
         padding-right: 2rem;
-        // background-color: rgb(193, 193, 193);
         border-radius: 1rem;
-        // -webkit-box-shadow: 6px 5px 20px 5px #3c5aa6; 
-        // box-shadow: 6px 5px 20px 5px #3c5aa6;
 
         #logo_container{  
-            
-            // border: solid black 6px;
             width: 80%;
 
             #logo_pokemon{
-                // width: 100%;
                 filter: drop-shadow(6px 12px 4px);
-                animation: rotate-in-2-cw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
 
+            .rotate{
+                animation: rotate-in-2-cw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             }
         }
             
-        h2{
+        #memoryTitle{
             font-family: 'Solid';
             font-size: 3.5rem;
             text-shadow: 3px 8px 2px #ffcb05;
             letter-spacing: 0.7rem;
-            color: #18235f;
+            color: #3c5aa6;
             margin-left: 4rem;
-            // font-style: italic;
             text-align: center;
             filter: drop-shadow(4px 4px 4px);
+            
+        }
+    // Class to start animation after modal
+        .slide-in{
             animation: slide-in-elliptic-bottom-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.7s both;
+
         }
 
         h3{
             font-family: 'Orbitron';
             color: #FFFFFF;
-            text-shadow: 2px 4px 2px #132b7b;
+            text-shadow: 2px 4px 2px #3c5aa6;
             border: solid 2px rgb(56, 11, 11);
             background-color: #803a25;
             border-radius: 0.5rem;
