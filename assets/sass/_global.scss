@@ -3,12 +3,12 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    cursor: url('assets/cursor/cursor.cur'), auto;
+    cursor: url('../cursor/cursor.cur'), auto;
     
     button:hover{
 
         // Cursor
-        cursor: url('assets/cursor/cursor_hover.cur'), auto;
+        cursor: url('../cursor/cursor_hover.cur'), auto;
     }
 
     #modalContainer{
@@ -140,7 +140,7 @@ body{
     #mute:hover{
         background-color: #FFFFFF;
         transition: 2s;
-        cursor: url('assets/cursor/cursor_hover.cur'), auto;
+        cursor: url('../cursor/cursor_hover.cur'), auto;
 
 
     // Class to start animation after modal
@@ -231,7 +231,7 @@ body{
             margin-left: 4rem;
             animation: heartbeat 3s ease-in-out infinite 3s both;
             // cursor: pointer;
-            cursor: url('assets/cursor/cursor_hover.cur'), auto;
+            cursor: url('../cursor/cursor_hover.cur'), auto;
             text-align: center;
 
             @include for-phone() {
