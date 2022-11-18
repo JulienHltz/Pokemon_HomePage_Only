@@ -12,6 +12,9 @@ let startSound = document.getElementById("startSound");
 let unMute = document.getElementById("unMute");
 let muteSound = document.getElementById("muteSound");
 
+// Sound Volume
+backgroundSound.volume = 0.3;
+
 // After the page load
 window.onload = function () {
   let ouiBtn = document.getElementById("ouiBtn");
@@ -21,9 +24,11 @@ window.onload = function () {
   // Modal settings
   ouiBtn.addEventListener("click", () => {
     unMute.play();
-    alert("Activation du son en jeu");
+    setTimeout(() => {
+      backgroundSound.play();
+    }, 800)
+    // alert("Activation du son en jeu");
     modal.style.display = "none";
-    backgroundSound.play();
     faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
     soundBtn.style.backgroundColor = "#3c5aa6";
   });

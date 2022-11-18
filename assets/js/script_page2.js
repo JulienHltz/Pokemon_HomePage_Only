@@ -6,11 +6,16 @@ let faSound = document.getElementById("fa_sound");
 let unMute = document.getElementById("unMute");
 let muteSound = document.getElementById("muteSound");
 
+// Sound Volume
+secondPageMusic.volume = 0.3;
+
 
 
 
     window.onload = function(){
       secondPageMusic.play()
+      faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
+
     };
 
     // Mute Btn ON/OFF
