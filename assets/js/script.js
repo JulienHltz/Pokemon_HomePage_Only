@@ -98,7 +98,7 @@ window.addEventListener("keydown", (event) => {
     startSound.play();
     backgroundSound.pause();
     pikaLoader.style.display="block"
-
+    startBackground.classList.replace('kenburns' , 'kenburns2')
     setTimeout(() => {
       window.location.href = "secondpage.html";
     }, 3100);
