@@ -10,6 +10,13 @@
     <script src="assets/js/script.js" defer></script>
 </head>
 <body id="body">
+    <!-- Sound -->
+    <audio src="assets/music/Lullaby.mp3" id="start_music" loop="loop"></audio>
+    <audio src="assets/music/start.wav" id="startSound" ></audio>
+    <audio src="assets/music/click.wav" id="clickSound" ></audio>
+    <audio src="assets/music/mute.wav" id="muteSound" ></audio>
+    
+
     <div id="modalContainer">
         <div id="modal">
         <p id="modalText">Activer le son en jeu ?</p>
@@ -19,7 +26,6 @@
         </div>
         </div>
     </div>
-    <audio src="assets/music/Lullaby.mp3" id="start_music" loop="loop"></audio>
     <img id="background" src="assets/img/background.png" alt="">
     <button id="mute">
         <i class="fa-solid fa-volume-xmark" id="fa_sound"></i>
@@ -29,7 +35,7 @@
         <img id ="logo_pokemon" src="assets/img/logo.png" alt="" width="100%">
         </div>
         <h2 id="memoryTitle">Memory game</h2>
-        <h3>Appuyez sur ENTRER</h3>
+        <h3 id="startBtn">Appuyez sur ENTRER</h3>
         
     </div>
 </body>

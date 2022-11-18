@@ -3,7 +3,13 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    cursor: url('/assets/cursor/cursor.cur'), auto;
     
+    button:hover{
+
+        // Cursor
+        cursor: url('/assets/cursor/cursor_hover.cur'), auto;
+    }
 
     #modalContainer{
         display: flex;
@@ -56,7 +62,7 @@ body{
             padding: 0.4rem 0 0.4rem 0;
             width: 8rem;
             height: 3.3rem;
-            cursor: pointer;
+            // cursor: pointer;
             border: none;
             margin-top: 3.5rem;
 
@@ -130,6 +136,8 @@ body{
     #mute:hover{
         background-color: #FFFFFF;
         transition: 2s;
+        cursor: url('/assets/cursor/cursor_hover.cur'), auto;
+
 
     // Class to start animation after modal
         .bounce{
@@ -206,7 +214,7 @@ body{
 
         }
 
-        h3{
+        #startBtn{
             font-family: 'Orbitron';
             color: #FFFFFF;
             text-shadow: 2px 4px 2px #3c5aa6;
@@ -218,7 +226,8 @@ body{
             font-size: 2rem;
             margin-left: 4rem;
             animation: heartbeat 3s ease-in-out infinite 3s both;
-            cursor: pointer;
+            // cursor: pointer;
+            cursor: url('/assets/cursor/cursor_hover.cur'), auto;
             text-align: center;
 
             @include for-phone() {
@@ -230,7 +239,7 @@ body{
             }
         }
 
-        h3:hover{
+        #startBtn:hover{
             background-color: #132b7b;
             color: white ;
             text-shadow: 2px 4px 2px #803a25;

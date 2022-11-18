@@ -1,8 +1,15 @@
 
 let soundBtn = document.getElementById("mute");
-let audioEl = document.getElementById("start_music");
 let body = document.getElementById("body");
 let faSound = document.getElementById("fa_sound");
+let startBtn = document.getElementById("startBtn")
+
+// Sound
+let backgroundSound = document.getElementById("start_music");
+let startSound = document.getElementById("startSound");
+let clickSound = document.getElementById("clickSound");
+let muteSound = document.getElementById("muteSound");
+
 
 // After the page load
 window.onload = function () {
@@ -13,9 +20,10 @@ window.onload = function () {
   
     // Modal settings
     ouiBtn.addEventListener("click", () => {
+      clickSound.play();
       alert("Activation du son en jeu");
       modal.style.display = "none";
-      audioEl.play();
+      backgroundSound.play();
       faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
       soundBtn.style.backgroundColor = "#3c5aa6";
     }) 
@@ -48,14 +56,24 @@ window.onload = function () {
   // Mute Btn ON/OFF
 
   soundBtn.addEventListener("click", () => {
-    if (audioEl.paused) {
-      audioEl.play();
+    if (backgroundSound.paused) {
+      clickSound.play()
+      backgroundSound.play();
       faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
       soundBtn.style.backgroundColor = "#3c5aa6";
     } else {
-      audioEl.pause();
-      audioEl.currentTime = 0;
+      backgroundSound.pause();
+      muteSound.play();
+      backgroundSound.currentTime = 0;
       faSound.classList.replace("fa-volume-high", "fa-volume-xmark");
       soundBtn.style.backgroundColor = "#b92b2b";
     }
   });
+
+  // Start Button settings
+
+  startBtn.addEventListener("click", () =>{
+    startSound.play()
+  })
+
+
