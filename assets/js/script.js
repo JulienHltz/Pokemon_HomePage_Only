@@ -1,8 +1,10 @@
+let startBackground = document.getElementById("background");
 let soundBtn = document.getElementById("mute");
 let body = document.getElementById("body");
 let faSound = document.getElementById("fa_sound");
 let startBtn = document.getElementById("startBtn");
 let pikaLoader = document.getElementById("pikaLoader")
+
 
 // Sound
 let backgroundSound = document.getElementById("start_music");
@@ -34,7 +36,6 @@ window.onload = function () {
   });
 
   if (ouiBtn || nonBtn) {
-    let startBackground = document.getElementById("background");
     let memoryTitle = document.getElementById("memoryTitle");
     let logo_pokemon = document.getElementById("logo_pokemon");
 
@@ -72,21 +73,28 @@ soundBtn.addEventListener("click", () => {
 
 startBtn.addEventListener("click", () => {
   startSound.play();
+  backgroundSound.pause();
   pikaLoader.style.display="block"
-  // startBackground.classList.replace('kenburns' , 'kenburns2')
+  console.log(startBackground.classList);
+  startBackground.classList.replace('kenburns' , 'kenburns2')
   setTimeout(() => {
     window.location.href = "secondpage.html";
-  }, 2300);
+  }, 3100);
+  // secondPageMusic.play()
+
 });
 
 // Enter keyboard
 window.addEventListener("keydown", (event) => {
   if (event.code === "Enter") {
     startSound.play();
+    backgroundSound.pause();
     pikaLoader.style.display="block"
 
     setTimeout(() => {
       window.location.href = "secondpage.html";
-    }, 2300);
-  }
-});
+    }, 3100);
+      // secondPageMusic.play()
+  }})
+
+ 

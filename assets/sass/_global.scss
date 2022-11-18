@@ -104,6 +104,7 @@ body{
         object-fit: cover;
         width: 100vw;
         height: 100vh;
+        z-index: -1;
         
         // transition: 3s;
     }
@@ -260,7 +261,20 @@ body{
         }
     
 
+        // Second page
 
+        #build{
+            font-family: 'Solid';
+            font-size: 3.5rem;
+            text-shadow: 3px 8px 2px #ffcb05;
+            letter-spacing: 0.7rem;
+            color: #3c5aa6;
+            margin-left: 4rem;
+            text-align: center;
+            filter: drop-shadow(4px 4px 4px);
+            animation: slide-in-elliptic-bottom-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.7s both;
+
+        }
 
     }
 
