@@ -7,7 +7,7 @@ let startBtn = document.getElementById("startBtn")
 // Sound
 let backgroundSound = document.getElementById("start_music");
 let startSound = document.getElementById("startSound");
-let clickSound = document.getElementById("clickSound");
+let unMute = document.getElementById("unMute");
 let muteSound = document.getElementById("muteSound");
 
 
@@ -16,11 +16,10 @@ window.onload = function () {
   let ouiBtn = document.getElementById("ouiBtn");
   let nonBtn = document.getElementById("nonBtn");
   let modal = document.getElementById("modalContainer");
-  let bothBtn = document.querySelector(".modal_button");
   
     // Modal settings
     ouiBtn.addEventListener("click", () => {
-      clickSound.play();
+      unMute.play();
       alert("Activation du son en jeu");
       modal.style.display = "none";
       backgroundSound.play();
@@ -57,10 +56,10 @@ window.onload = function () {
 
   soundBtn.addEventListener("click", () => {
     if (backgroundSound.paused) {
-      clickSound.play()
+      unMute.play()
       setTimeout(() =>{
       backgroundSound.play();
-      }, 1500)
+      }, 800)
 
       faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
       soundBtn.style.backgroundColor = "#3c5aa6";
@@ -77,6 +76,8 @@ window.onload = function () {
 
   startBtn.addEventListener("click", () =>{
     startSound.play()
+    startBackground.classList.replace('kenburns' , 'kenburns2')
+    
   })
 
 
