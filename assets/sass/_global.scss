@@ -24,6 +24,10 @@ body{
             background-color: wheat;
             border-radius: 1rem;
             // border: solid black 5px;
+            @include for-phone{
+                width: 80%;
+                height: 70%;
+            }
             
             #modalText{
             font-family: 'Orbitron';
@@ -101,17 +105,25 @@ body{
         width: 1rem;
         height: 1rem;
         position: fixed;
-        top: 10rem;
-        right: 8rem;
+        top: 15%;
+        right: 10%;
         background-color: #b92b2b;
         border-radius: 100%;
         border: solid 2px white;
         padding: 2.6rem;
         cursor: pointer;
+
+        @include for-phone() {
+        display: none;
+        
+        }
+        
+        
         
         i{
             font-size: 2.8rem;
             color: #FFFFFF;
+
         }
     }
 
@@ -142,11 +154,27 @@ body{
         padding-right: 2rem;
         border-radius: 1rem;
 
+        @include for-phone() {
+            width: 100%; 
+            padding-right: 0;
+            
+            }
+
+
+        
         #logo_container{  
             width: 80%;
 
+            // 
+            @include for-phone() {
+            width: 100%;
+            }
+
+
+
             #logo_pokemon{
                 filter: drop-shadow(6px 12px 4px);
+ 
             }
 
             .rotate{
@@ -163,6 +191,13 @@ body{
             margin-left: 4rem;
             text-align: center;
             filter: drop-shadow(4px 4px 4px);
+
+            @include for-phone() {
+                font-size: 2.5rem;
+                margin-left: 0; 
+                margin-top: 3rem; 
+             }
+        
             
         }
     // Class to start animation after modal
@@ -185,6 +220,14 @@ body{
             animation: heartbeat 3s ease-in-out infinite 3s both;
             cursor: pointer;
             text-align: center;
+
+            @include for-phone() {
+                font-size: 1rem;
+                width: 70%;
+                border: solid;
+                margin-left: 0;
+                z-index: 3; 
+            }
         }
 
         h3:hover{

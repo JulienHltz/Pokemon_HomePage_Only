@@ -11,25 +11,24 @@ window.onload = function () {
   let modal = document.getElementById("modalContainer");
   let bothBtn = document.querySelector(".modal_button");
   
-
+    // Modal settings
     ouiBtn.addEventListener("click", () => {
       alert("Activation du son en jeu");
       modal.style.display = "none";
       audioEl.play();
       faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
-      soundBtn.style.backgroundColor = "#2f779c";
+      soundBtn.style.backgroundColor = "#3c5aa6";
     }) 
     
     nonBtn.addEventListener("click", () => {
       alert("Le son en jeu est désormais désactivé");
       modal.style.display = "none";
       faSound.classList.replace("fa-volume-high", "fa-volume-xmark");
-      soundBtn.style.backgroundColor = "#2f779c";
+      soundBtn.style.backgroundColor = "#3c5aa6";
     })
 
     if(ouiBtn || nonBtn){
-      
-      // Variables
+
       let startBackground = document.getElementById("background");
       let memoryTitle = document.getElementById("memoryTitle");
       let logo_pokemon = document.getElementById("logo_pokemon")
@@ -52,7 +51,7 @@ window.onload = function () {
     if (audioEl.paused) {
       audioEl.play();
       faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
-      soundBtn.style.backgroundColor = "#2f779c";
+      soundBtn.style.backgroundColor = "#3c5aa6";
     } else {
       audioEl.pause();
       audioEl.currentTime = 0;
