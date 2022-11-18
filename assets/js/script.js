@@ -58,7 +58,10 @@ window.onload = function () {
   soundBtn.addEventListener("click", () => {
     if (backgroundSound.paused) {
       clickSound.play()
+      setTimeout(() =>{
       backgroundSound.play();
+      }, 1500)
+
       faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
       soundBtn.style.backgroundColor = "#3c5aa6";
     } else {
