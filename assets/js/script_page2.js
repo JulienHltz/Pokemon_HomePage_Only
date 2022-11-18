@@ -1,6 +1,10 @@
 let secondPageMusic = document.getElementById("secondPageMusic");
 let soundBtn = document.getElementById("mute");
 let faSound = document.getElementById("fa_sound");
+let startBackground = document.getElementById("background");
+let memoryTitle = document.getElementById("memoryTitle");
+
+
 
 // Sound
 let unMute = document.getElementById("unMute");
@@ -15,6 +19,8 @@ secondPageMusic.volume = 0.3;
     window.onload = function(){
       secondPageMusic.play()
       faSound.classList.replace("fa-volume-xmark", "fa-volume-high");
+      startBackground.classList.add("kenburns2");
+      memoryTitle.classList.add("slide-in");
 
     };
 

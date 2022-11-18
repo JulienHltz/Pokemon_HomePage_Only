@@ -15,6 +15,9 @@ let muteSound = document.getElementById("muteSound");
 // Sound Volume
 backgroundSound.volume = 0.3;
 
+// Sound Flag
+let MuteSoundFlag = 
+
 // After the page load
 window.onload = function () {
   let ouiBtn = document.getElementById("ouiBtn");

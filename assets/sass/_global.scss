@@ -34,7 +34,7 @@ body {
     #modal {
       width: 35%;
       height: 50%;
-      background-color: wheat;
+      background-color: rgba(229, 229, 248, 0.704);
       border-radius: 1rem;
       // border: solid black 5px;
       @include for-phone {
@@ -103,7 +103,7 @@ body {
 
   // Class to start animation after modal
   .kenburns {
-    animation: kenburns-top-left 6s reverse;
+    animation: kenburns-top-left 4s reverse;
   }
   // Class to start animation after clicking start
   .kenburns2 {
