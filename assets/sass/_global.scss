@@ -11,6 +11,15 @@ body{
         cursor: url('../cursor/cursor_hover.cur'), auto;
     }
 
+    #pikaLoader{
+        display: none;
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 3;
+        width: 10%;
+    }
+
     #modalContainer{
         display: flex;
         justify-content: center;
